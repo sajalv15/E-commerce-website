@@ -1,0 +1,652 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'League Spartan', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2 {
+    font-size: 50px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4 {
+    font-size: 20px;
+    color: #222;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p {
+    font-size: 18px;
+    color: #465b52;
+    margin: 15px 0px 20px 0px;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 80px;
+    background-color: #E3E6F4;
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.08);
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.08);
+    /* right, bottom ,fading length rgb(color color color fade) */
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.header .navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    /*  so that transion of hover dheere se ho */
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+    /* a.active likna hai without space */
+    color: #088178;
+}
+
+.navbar li a.active::after,
+.navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+}
+
+.hero {
+    background-image: url("img/hero4.png");
+    height: 90vh;
+    /* 10% navigation bar ne le loya tgha isliye 980vh*/
+    width: auto;
+    background-size: cover;
+    /* =>cover matlab pure page par cover ho jye
+    =>contain matlab image ka original size rahega with repetition lekin ek hi pure page par rahegi */
+    background-position: top 25% right 0%;
+    padding: 0 80px;
+    display: flex;
+    justify-content: center;
+    /*justify tumhara height ke centre me lata hai*/
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.hero h4 {
+    padding-bottom: 15px;
+}
+
+.hero h1 {
+    color: #088178;
+    padding-bottom: 15px;
+}
+
+.hero p {
+    padding-bottom: 15px;
+}
+
+.hero button {
+    background-image: url("img/button.png");
+    background-color: transparent;
+    color: #088178;
+    border: 0;
+    background-position: right 0%;
+    /* background-color: red; */
+
+    padding: 15px 80px 15px 65px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.hero button a {
+    text-decoration: none;
+    color: #088178;
+}
+
+.feature {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.feature .febox {
+    width: 150px;
+    text-align: center;
+    padding: 30px 15px;
+    box-shadow: 20px 20px 34px rgb(0, 0, 0, 0.05);
+    border: 1px solid #cce7d0;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.feature .febox:hover {
+    box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+}
+
+.feature .febox h6 {
+    display: inline-block;
+    padding: 8px 10px;
+    line-height: 1;
+    border-radius: 5px;
+    background-color: #fddde4;
+}
+
+.feature .febox img {
+    margin-bottom: 10px;
+}
+
+.product {
+    text-align: center;
+}
+
+.product .pro {
+
+    width: 15%;
+    min-width: 250px;
+    padding: 10px 12px;
+    margin: 15px 50px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+}
+
+.product .pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+.product .pro img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.product .pro .des {
+    padding: 10px 0;
+}
+
+.product .pro .des h5 {
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+.product .pro .des span {
+    color: #606063;
+    font-size: 16px;
+}
+
+.product .pro .des h4 {
+    color: #088178;
+    font-size: px;
+}
+
+.product .pro .des .star {
+    color: rgb(248, 228, 74);
+    padding-bottom: 10px;
+}
+
+.product .pro .des a i {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #dceeedf0;
+    border-radius: 20px;
+    color: #088178;
+}
+
+.product .pro-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.banner .section-m1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("img/banner/b2.jpg");
+    width: 100%;
+    height: 40vh;
+}
+
+.banner .section-m1 h4 {
+    color: #fff;
+    font-size: 20px;
+}
+
+.banner .section-m1 h2 {
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.banner .section-m1 h2 span {
+    color: red;
+}
+
+.banner .section-m1 button {
+    padding: 12px 13px;
+    border: 2px solid #088178;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.banner .section-m1 button:hover {
+    background-color: #088178;
+}
+
+.sm-banner .section-p1 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.sm-banner .section-p1 .banner-box {
+    padding-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    flex-direction: column;
+    background-image: url("img/banner/b17.jpg");
+    background-size: cover;
+    background-position: center;
+    min-width: 580px;
+    height: 40vh;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.sm-banner .section-p1 .banner-box h4 {
+    color: white;
+    padding-bottom: 10px;
+}
+
+.sm-banner .section-p1 .banner-box h2 {
+    padding-bottom: 10px;
+}
+
+.sm-banner .section-p1 .banner-box span {
+    padding-bottom: 20px;
+}
+
+.sm-banner .section-p1 .banner-box2 {
+    background-image: url("img/banner/b10.jpg");
+}
+
+.sm-banner .section-p1 button {
+    padding: 12px 23px;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.sm-banner .section-p1 button:hover {
+    background-color: #088178;
+}
+
+.banner3 .banner-box {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    background-image: url("img/banner/b7.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 30%;
+    height: 30vh;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.banner3 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.banner3 h2 {
+    color: white;
+}
+
+.banner3 h3 {
+    color: red;
+}
+
+.banner3 .banner-box2 {
+    background-image: url("img/banner/b4.jpg");
+}
+
+.banner3 .banner-box3 {
+    background-image: url("img/banner/b18.jpg");
+}
+
+.newsletter {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-image: url("img/banner/b2.jpg");
+
+}
+
+.newsletter .newstext h4 {
+    color: white;
+}
+
+.newsletter .newstext p {
+    color: rgb(145, 145, 145);
+}
+
+.newsletter .newstext span {
+    color: wheat;
+}
+
+.newsletter .form input {
+    padding: 15px 30px 15px 30px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    font-size: 15px;
+    outline: none;
+    width: 250px;
+    text-align: center;
+}
+
+.newsletter .form button {
+    padding: 15px 30px 15px 30px;
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: #088178;
+
+}
+
+.newsletter .form button:hover {
+    background-color: #348e8a;
+}
+
+.footer {
+    background-color: #E3E6F4;
+    display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* align-items:flex-start; */
+    /* text-align:left; */
+    padding: 50px;
+
+}
+.footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.footer .col img {
+    margin-bottom: 30px;
+}
+
+.footer .col h4 {
+    margin-bottom: 30px;
+}
+
+.footer p {
+    margin: 0 0 9px 0;
+}
+
+.footer .follow h4 {
+    margin-top: 20px;
+}
+
+.footer .install .row img {
+    border: 2px solid #088178;
+    border-radius: 10px;
+}
+
+/* .footer .col .icon a{
+    margin-right:10px ;
+}
+.footer .col .icon{
+    padding-top: 10px;
+} */
+.footer .col a {
+    margin: 10px 0 5px 0;
+    text-decoration: none;
+    color: black;
+}
+
+.footer .follow i {
+    color: black;
+    padding: 0px 10px 10px 0;
+}
+
+.footer .col .row img {
+    margin-top: 20px;
+}
+
+.footer .col a:hover,
+.footer .col .follow i:hover {
+    color: #088178;
+}
+
+.footer .copyrights {
+    width: 100%;
+    text-align: center;
+}
+
+/* shop */
+
+.pagination a {
+    background-color: #088178;
+    border-radius: 5px;
+    padding: 15px 20px;
+    color: white;
+    margin: 2px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.productdetails .small-pro-image {
+    width:40%;
+    margin-right: 50px;
+}
+
+.productdetails .small-img-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.productdetails {
+    display: flex;
+    margin-top: 20px;
+}
+.productdetails .small-pro-details{
+    width: 50%;
+    padding-top: 30px;
+}
+.productdetails .small-pro-details h6{
+    padding-bottom: 20px;
+}
+
+
+
+
+/* blog*/
+.banner {
+    background-image: url("img/banner/b1.jpg");
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ban {
+    background-image: url("img/banner/b19.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.banner h2 span {
+    color: #e27b35;
+}
+
+.banner h2 {
+    color: rgb(255, 255, 255);
+    padding: 25px;
+    font-size: 30px;
+}
+
+.banner h4 {
+    color: white;
+    font-weight: 400;
+}
+
+.blog {
+    /* padding: 150px 150px 0 150px; */
+    padding: 150px 10vw 0 10vw;
+
+}
+
+.blog .blog-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 150px;
+    position: relative;
+
+}
+
+.blog .blog-box h4 {
+    font-size: 23px;
+}
+
+.blog .blog-box p {
+    font-size: 18px;
+    color: #606063;
+}
+
+.blog .blog-img {
+    width: 50%;
+    margin-right: 40px;
+}
+
+.blog img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.blog .blog-details {
+    width: 50%;
+}
+
+.blog .blog-box h2 {
+    z-index: -1;
+    font-size: 70px;
+    font-weight: 700;
+    color: #c9cbce;
+    position: absolute;
+    top: -38px;
+
+}
+.productdetails .small-pro-details h2 {
+    margin-bottom: 20px;
+}
+.productdetails .small-pro-details h4{
+    margin-bottom:10px ;
+}
+.productdetails .small-pro-details select{
+    padding:17px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    
+}
+.productdetails .small-pro-details input{
+    padding: 17px;
+    width: 40px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+.productdetails .small-pro-details select{
+    /* padding-bottom: 100px; */
+}
+.productdetails .small-pro-details button{
+    margin-top: 20px;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    padding: 20px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: 1px solid black;
+    margin-right: 20px;
+}
+.productdetails .small-pro-details button:hover{
+    background-color: #088178;
+    color: white;
+
+}
